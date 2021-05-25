@@ -13,10 +13,10 @@ pygame.display.set_caption('need for speed')
 sc = pygame.display.set_mode((WIDTH, LENGTH))
 clock = pygame.time.Clock()
 pygame.time.set_timer(pygame.USEREVENT, 200)
-sound1 = pygame.mixer.Sound('punch.wav')
+sound1 = pygame.mixer.Sound('data/sound/punch.wav')
 
-car_surf = pygame.image.load('car.PNG').convert_alpha()
-BLOCKS = ['block_1.PNG', 'block_2.PNG']
+car_surf = pygame.image.load('data/image/car.PNG').convert_alpha()
+BLOCKS = ['data/image/block_1.PNG', 'data/image/block_2.PNG']
 BLOCKS_SURF = []
 
 for i in range(len(BLOCKS)):
@@ -84,7 +84,7 @@ def main_game():
     blocks = pygame.sprite.Group()
     Block(random.randint(1, WIDTH), BLOCKS_SURF[random.randint(0, 1)], blocks, 5)
     TIME_GAME = 0
-    pygame.mixer.music.load('Blinded_In_Chains.mp3')
+    pygame.mixer.music.load('data/music/Blinded_In_Chains.mp3')
     pygame.mixer.music.play(-1)
     while True:
 
